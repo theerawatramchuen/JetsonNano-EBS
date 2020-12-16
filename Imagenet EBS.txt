@@ -4,6 +4,8 @@ cd jetson-inference/python/training/classification/data
 
 git clone https://github.com/theerawatramchuen/JetsonNano-EBS.git
 
+### Download EBS.zip and unzip to directrory jetson-inference/python/training/classification/data
+
 cd jetson-inference/python/training/classification
 
 python3 train.py --model-dir=models/EBS/ --epochs=120 data/EBS 

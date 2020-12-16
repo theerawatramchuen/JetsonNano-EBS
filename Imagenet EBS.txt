@@ -1,4 +1,4 @@
-### https://github.com/dusty-nv/jetson-inference/blob/master/docs/pytorch-collect.md
+### Reference to https://github.com/dusty-nv/jetson-inference/blob/master/docs/pytorch-collect.md
 
 cd jetson-inference/python/training/classification/data
 

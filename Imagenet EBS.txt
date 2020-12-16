@@ -1,0 +1,21 @@
+### https://github.com/dusty-nv/jetson-inference/blob/master/docs/pytorch-collect.md
+
+cd jetson-inference/python/training/classification/data
+
+git clone https://github.com/theerawatramchuen/JetsonNano-EBS.git
+
+cd jetson-inference/python/training/classification
+
+python3 train.py --model-dir=models/EBS/ --epochs=120 data/EBS 
+
+python3 onnx_export.py --model-dir=models/EBS
+
+imagenet --model=models/EBS/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=data/EBS/labels.txt data/EBS/test/goods data/EBS/test/test_good
+
+imagenet --model=models/EBS/resnet18.onnx --input_blob=input_0 --output_blob=output_0 --labels=data/EBS/labels.txt data/EBS/test/rejects data/EBS/test/test_reject
+
+
+
+
+
+
